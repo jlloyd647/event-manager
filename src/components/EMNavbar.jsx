@@ -7,14 +7,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function EMNavbar() {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/">Event Manager</Navbar.Brand>
+      <Navbar.Brand href="/">Character Manager System</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="/players">Player List</Nav.Link>
-          <Nav.Link href="/new">Add New Player</Nav.Link>
-          <Nav.Link href="/events">Event List</Nav.Link>
-          <Nav.Link href="/checkin">Check In</Nav.Link>
+          <Nav.Link href="/edit-character">Add Character</Nav.Link>
+          <Nav.Link href="/edit-skill">Add Skill</Nav.Link>
+          <Nav.Link href="/list-characters">Character List</Nav.Link>
+          <Nav.Link href="/list-skills">Skill List</Nav.Link>
+          <Nav.Link href="/character-sheet">Character Sheet</Nav.Link>
+          <Nav.Link href="/"/>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
