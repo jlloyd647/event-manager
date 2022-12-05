@@ -6,7 +6,7 @@ function ListPlayers(props) {
   const { playerList } = props
   return(
     <Container>
-      <PlayersTable playerList={playerList}/>
+      <PlayersTable playerList={playerList} charFunctions = { charFunctions }/>
     </Container>
   )
 }

@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
 
-function ListCharactersTable({charList}) {
-
-  console.log(charList)
+function ListCharactersTable({charList, charFunctions}) {
+  const {selectChar, addChar} = charFunctions
+  const navigate = useNavigate();
 
   const charSelect = (e) => {
-    console.log(e.target.value)
+    selectChar(e.target.innerHTML)
+    navigate('/edit-character')
   }
 
   return (
@@ -25,7 +27,7 @@ function ListCharactersTable({charList}) {
         {
           charList.map((res) => {
             return(
-              <tr onClick={(e) => charSelect(e)} defaultValue={res.charID}>
+              <tr key={res.charID} onClick={(e) => charSelect(e)} value={res.charID}>
                 <td value={res.charID}>{res.charID}</td>
                 <td>{res.playerID}</td>
                 <td>{res.charName}</td>

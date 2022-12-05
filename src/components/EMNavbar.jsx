@@ -16,7 +16,6 @@ function EMNavbar() {
           <Nav.Link href="/list-characters">Character List</Nav.Link>
           <Nav.Link href="/list-skills">Skill List</Nav.Link>
           <Nav.Link href="/character-sheet">Character Sheet</Nav.Link>
-          <Nav.Link href="/"/>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
